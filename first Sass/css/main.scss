@@ -1,12 +1,20 @@
+
+// variables and objects
 $colors: (
     primary: #005DFF,
     primary-light: lighten(#005DFF, 40%),
     primary-dark: darken(#005DFF, 40%),
-    accent: #FFF6BB
+    accent: #FFF6BB,
+  
+
 );
 
+// variables
 $padding: 15px; 
 $borders: 15px;
+
+// function in sass
+
 
 @function color($color-name) {
     @return map-get($colors, $color-name)
@@ -18,12 +26,14 @@ $desktop: 840px;
     @media (min-width: #{$desktop}) {
         @content;
     }
+   
+    
 }
 
 body, html {
     height: 100%;
 }
-
+// nesting
 body {
     font-family: 'Montserrat';
     margin: 0;
